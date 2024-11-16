@@ -1,0 +1,540 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #1E62A3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  background-color: #74C6DC;
+  border-radius: 5px;
+}
+
+/* Arama Çubuğu */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.search-bar button {
+  padding: 12px;
+  background-color: #53B4CF;
+  color: #fff;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #187fa0;
+}
+
+/* Anasayfa Banner */
+.full-banner {
+  background-image: url('../img/anasayfabanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Banner İçeriği */
+.banner-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Tur Açıklama Kartları (Anasayfa) */
+.tour-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.container-title {
+  font-size: 24px;
+  text-align: center;
+  color: #2b2a2ad9;
+  margin: 30px;
+}
+
+.tour-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25%;
+  margin: 20px 0;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 8px rgb(119, 116, 116);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.tour-item img {
+  width: 100%;
+  height: auto;
+}
+
+.tour-info {
+  padding: 20px;
+}
+
+.tour-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0fadd9;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/*Fotoğraf Galerisi (Anasayfa)*/
+.photo-gallery {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 sütun */
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/*Tur Sayfası */
+.tour-title {
+  position: center;
+  margin-top: 20px;
+}
+
+.tour-categories {
+  display: flex;
+  gap: 30px; /* Kartlar arasındaki boşluk */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.tour-category {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+}
+
+.tour-category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Resmi içeriğin altına alır */
+}
+
+/* Tur İçerik kısmı */
+.tour-category .content {
+  position: relative;
+  z-index: 2; /* İçeriği resmin üstünde gösterir */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.tour-category h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/*Tur Liste */
+.tour-category ul {
+  list-style-type: none;
+}
+
+.tour-category ul li {
+  margin-bottom: 5px;
+}
+
+.tour-category ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tour-category ul li a:hover {
+  color: #d0ff00;
+}
+
+/* Tur Açıklama Metni */
+.tour-description {
+  max-width: 1100px;
+  margin: 20px auto;
+  font-size: 1em;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  line-height: 1.6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden; /* Taşmaları önlemek için */
+  z-index: 1; /* Öncelik sırasını ayarlar */
+}
+
+/* Başlık stili */
+.tour-description h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* Paragraf aralığı */
+.tour-description p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/*Blog Sayfası */
+.blog-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 700px;
+  width: 100%;
+  margin: 20px;
+}
+
+/* Blok başlığı */
+.title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.title-image {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Giriş paragrafı */
+.intro {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.blog-title {
+  color: #007baf;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.blog-link {
+  color: #007baf;
+  text-decoration: none;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+.blog-description {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Etkinlik Takvimi Sayfası */
+.event-list {
+  padding: 2em 10%; /* Ortalamak için yanlardan boşluk */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.event-list h2{
+  padding: 20px;
+  text-align: center;
+}
+
+.event-item {
+  display: grid;
+  grid-template-columns: 100px 150px 200px 1fr;
+  align-items: center;
+  background-color: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Etkinlik Detayları */
+.event-date {
+  font-weight: bold;
+  color: #555;
+}
+
+.event-country {
+  color: #007acc;
+  font-weight: bold;
+}
+
+.event-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.event-description {
+  color: #666;
+  margin: 0;
+}
+
+/* Hakkımızda Sayfası */
+.about-section {
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(17, 182, 253);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about-section h1 {
+  color: #333333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  color: #555555;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* İletişim Sayfası */
+#contact {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background-color: #0fadd9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #1E62A3;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* İçerik Sütunları */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-top: 1px solid #79c1f4;
+  border-bottom: 1px solid #79c1f4;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.socials,
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.socials li,
+.links li {
+  margin: 8px 0;
+}
+
+.socials li a,
+.links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.socials li a:hover,
+.links li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  margin-top: 10px;
+}
