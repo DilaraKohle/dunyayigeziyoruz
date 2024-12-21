@@ -12,8 +12,8 @@ const ulkeler = {
 // Öneri göstermek için fonksiyon
 function oneriGoster(deger) {
     const oneriListesi = document.getElementById("oneriListesi");
-    oneriListesi.innerHTML = ""; // Önce öneri listesini temizle
-    let secilenIndex = -1; // Seçilen öğe için başlangıç indexi
+    oneriListesi.innerHTML = ""; 
+    let secilenIndex = -1; 
     const aramaInput = document.getElementById("arama");
 
     if (deger) {
@@ -30,7 +30,7 @@ function oneriGoster(deger) {
             div.className = "oneri-item";
             oneriListesi.appendChild(div);
         } else {
-            // Her ülkeyi öneri listesine ekle
+            // Her ülkeyi öneri listesine ekleme
             filtrelenmisUlkeler.forEach((ulke) => {
                 const div = document.createElement("div");
                 div.textContent = ulke;
@@ -38,7 +38,7 @@ function oneriGoster(deger) {
                 div.onclick = () => {
                     aramaInput.value = ulke;
                     window.location.href = ulkeler[ulke]; // Yönlendirme yap
-                    oneriListesi.innerHTML = ""; // Öneri listesini temizle
+                    oneriListesi.innerHTML = ""; 
                 };
                 oneriListesi.appendChild(div);
             });
@@ -48,7 +48,7 @@ function oneriGoster(deger) {
     // Klavye ile gezinti ve seçim işlemleri
     aramaInput.onkeydown = function (event) {
         const items = document.querySelectorAll(".oneri-item");
-        if (items.length === 0) return; // Öneri yoksa işlem yapma
+        if (items.length === 0) return; 
 
         if (event.key === "ArrowDown") {
             if (secilenIndex < items.length - 1) {
@@ -64,7 +64,7 @@ function oneriGoster(deger) {
            
         } else if (event.key === "Enter") {
             if (secilenIndex > -1 && items[secilenIndex]) {
-                items[secilenIndex].click(); // Seçili öğeyi tıkla
+                items[secilenIndex].click(); 
             }
             
         }
@@ -77,7 +77,7 @@ function oneriGoster(deger) {
             if (index === secilenIndex) {
                 item.classList.add("selected");
                 item.scrollIntoView({ behavior: "smooth", block: "nearest" }); // Seçilen öğeye kaydır
-                aramaInput.value = item.textContent; // Seçilen öğeyi arama kutusuna yaz
+                aramaInput.value = item.textContent; 
             }
         });
     }
@@ -94,7 +94,7 @@ function aramaYap() {
     }
 }
 
-// Enter tuşuna basıldığında işlem yap
+// Enter tuşuna basıldığında işlem yapma
 document.getElementById("arama").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         const deger = this.value;
@@ -107,7 +107,7 @@ document.getElementById("arama").addEventListener("keydown", function(event) {
     }
 });
 
-// Sayfa yüklenirken daha önce yapılan arama varsa yeniden işlemi başlat
+// Sayfa yüklenirken daha önce yapılan arama varsa yeniden işlemi başlatma
 window.addEventListener("load", function() {
     const aramaDegeri = localStorage.getItem("aramaDegeri");
     if (aramaDegeri && ulkeler[aramaDegeri]) {
@@ -115,5 +115,5 @@ window.addEventListener("load", function() {
     }
 });
 
-// Arama butonuna event listener ekleyelim
+// Arama butonuna event listener ekleme
 document.querySelector(".search-bar button").addEventListener("click", aramaYap);
