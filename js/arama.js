@@ -26,7 +26,7 @@ function oneriGoster(deger) {
 
         if (filtrelenmisUlkeler.length === 0) {
             const div = document.createElement("div");
-            div.textContent = "Ülke bulunamadı";
+            div.textContent = "Ülke bulunamadı!";
             div.className = "oneri-item";
             oneriListesi.appendChild(div);
         } else {

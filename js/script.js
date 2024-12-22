@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `,
         "fransa.html": `
             <h1>FRANSA TURU</h1>
-            <img src="../img/fransaTur.jpg" alt="Fransa">
+            <img src="../img/fransaTur.png" alt="Fransa">
             <p>Paris, Fransa'nın en popüler turistik destinasyonlarından biridir. Eyfel Kulesi, Louvre Müzesi gibi ikonik yerleri keşfederek büyüleyici bir Paris deneyimi yaşayın.</p>
             <h2>3 GECE 4 GÜN </h2>
             <h2>Türk Havayolları ile</h2>
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
                <img src="../img/italyaGaleri4.png" alt="İtalya">
             </div>
             <h4>Tur Haritası</h4> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12367340.84344755!2d2.1190867081576075!3d40.81982885131573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2zxLB0YWx5YQ!5e0!3m2!1str!2str!4v1734445365483!5m2!1str!2str" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <h4><h4>Tur Ücreti</h4> 700 € Kişi Başı</h4>
+            <h4><h4>Tur Ücreti</h4> 700 € Kişi Başı </h4>
             <h4>Rezervasyon Yapın</h4>
         `,
         "japonya.html": `

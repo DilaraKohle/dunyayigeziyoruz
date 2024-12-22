@@ -154,7 +154,7 @@ const events = [
         date: "25 Aralık",
         country: "Dünya Çapında",
         name: "Noel",
-        description: "Hristiyanların İsa’nın doğumunu kutladığı, hediyeleşmeler ve özel yemeklerle dolu bir bayramdır."
+        description: "Hristiyanların İsa’nın doğumunu kutladığı, hediyeleşmeler ve özel yemeklerle dolu bir bayramdır. "
     },
     {
         date: "31 Aralık",
