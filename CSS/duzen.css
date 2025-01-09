@@ -107,17 +107,19 @@
       height: auto; 
     }
 
-    /*Etkinlik Sayfası*/
+    /* Etkinlik Sayfası */
     .event-list {
-      padding: 1em; 
+      padding: 1em;
       gap: 0.5em;
     }
-  
+    
     .event-item {
-      grid-template-columns: 1fr;
+      display: flex; /* Flex yapısı kullanıldı */
+      flex-direction: column; /* İçerik dikey hizalanacak */
       text-align: left;
       padding: 1em;
-      max-width: 100%; 
+      width: 100%; /* Kart genişliğini ekrana göre ayarla */
+      box-sizing: border-box; /* Padding ve border hesaba dahil edilir */
     }
 
      /*Hakkımızda Sayfası*/
