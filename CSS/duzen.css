@@ -114,12 +114,12 @@
     }
     
     .event-item {
-      display: flex; /* Flex yapısı kullanıldı */
-      flex-direction: column; /* İçerik dikey hizalanacak */
+      display: flex; 
+      flex-direction: column; 
       text-align: left;
       padding: 1em;
-      width: 100%; /* Kart genişliğini ekrana göre ayarla */
-      box-sizing: border-box; /* Padding ve border hesaba dahil edilir */
+      width: 100%; 
+      box-sizing: border-box; 
     }
 
      /*Hakkımızda Sayfası*/
